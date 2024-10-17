@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+    <form method="post">
+      Név: <br>
+      <input type="text" name="nev" value="<%= data.nev %>"> <br>
+      Email: <br>
+      <input type="text" name="email" value="<%= data.email%>"><br>
+      Dátum és időpont: <br>
+      <input type="datetime-local" name="date" value="<%= data.date%>"><br>
+      Nézők: <br>
+      <input type="number" name="viewers"  min="1" max="10" value="<%=data.viewers%>"><br>
+      <button type="submit">Foglalás</button>
+      <% for(let err of errors){%>
+        <p style="color:red"><%= err%></p>
+      <%}%>
+  </form>
+</body>
+</html>
